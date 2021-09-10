@@ -14,11 +14,8 @@ class ReactTextFieldView extends React.Component<{},{}> {
     }
     changeText = (val:string) => {
         this.text = val
-        console.log("change text called", val)
     }
-
     render() {
-        console.log("rendering")
         return (
             <View style={styles.container}>
                 <Text>{this.text}</Text>
