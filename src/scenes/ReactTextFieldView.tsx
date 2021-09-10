@@ -12,10 +12,6 @@ class ReactTextFieldView extends React.Component<{},{}> {
         super(props)
         makeObservable(this)
     }
-
-    getText():string {
-        return this.text.length <=0 ? "HelloWorld" : this.text
-    }
     changeText = (val:string) => {
         this.text = val
         console.log("change text called", val)
