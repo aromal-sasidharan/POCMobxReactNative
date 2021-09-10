@@ -1,4 +1,4 @@
-import { action, makeObservable, observable } from "mobx";
+import { action, computed, makeObservable, observable } from "mobx";
 import { observer } from "mobx-react";
 import React from "react";
 import { SafeAreaView, StyleSheet, Text, TextInput, View } from "react-native";
@@ -6,33 +6,33 @@ import { SafeAreaView, StyleSheet, Text, TextInput, View } from "react-native";
 @observer
 class ReactTextFieldView extends React.Component<{},{}> {
 
-    text:String = "HelloWorld!"
+    @observable text:string = ""
    
     constructor(props: {}) {
         super(props)
-        makeObservable(this,{
-            text: observable
-        })
+        makeObservable(this)
     }
 
-
-    @action changeText = (val:String) => {
+    getText():string {
+        return this.text.length <=0 ? "HelloWorld" : this.text
+    }
+    changeText = (val:string) => {
         this.text = val
         console.log("change text called", val)
     }
 
     render() {
+        console.log("rendering")
         return (
             <View style={styles.container}>
                 <Text>{this.text}</Text>
-                <TextInput 
+                <TextInput
                     style={styles.textInput}
                     onChangeText = {this.changeText} 
                 />
             </View>
         )
     }
-
 }
 
 const styles = StyleSheet.create({
