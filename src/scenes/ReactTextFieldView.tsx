@@ -1,7 +1,7 @@
-import { action, computed, makeObservable, observable } from "mobx";
+import { action, makeObservable, observable } from "mobx";
 import { observer } from "mobx-react";
 import React from "react";
-import { SafeAreaView, StyleSheet, Text, TextInput, View } from "react-native";
+import { StyleSheet, Text, TextInput, View } from "react-native";
 
 @observer
 class ReactTextFieldView extends React.Component<{},{}> {
@@ -12,7 +12,7 @@ class ReactTextFieldView extends React.Component<{},{}> {
         super(props)
         makeObservable(this)
     }
-    changeText = (val:string) => {
+    @action changeText = (val:string) => {
         this.text = val
     }
     render() {

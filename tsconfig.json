@@ -6,17 +6,17 @@
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
-    "isolatedModules": true,
+    // "isolatedModules": true,
     "jsx": "react-native", 
     "lib": ["es6"],
     "moduleResolution": "node",
     "noEmit": true,
     "target": "esnext",
     "baseUrl": ".",
+    "outDir": "./build/frontend",
     "experimentalDecorators" : true,
     "paths": {
       "*": ["src/*"],
-      "@mobx-example-scenes": ["src/scenes/*"],
       "underscore": ["lodash"]
     }
   },

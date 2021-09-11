@@ -1,9 +1,15 @@
-import { StatusBar } from 'expo-status-bar';
+import { Provider } from 'mobx-react';
+import presenters from './src/configurator';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import ReactTextFieldView from "./src/scenes/ReactTextFieldView";
+import ReactTextFieldView1 from './src/scenes/ReactTextFieldView1';
+
+
+
 export default function App() {
   return (
-    <ReactTextFieldView/>
+    <Provider {...presenters}>
+      <ReactTextFieldView1/>
+    </Provider>
+    
   )
 }
