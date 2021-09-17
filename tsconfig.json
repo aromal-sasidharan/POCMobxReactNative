@@ -17,6 +17,8 @@
     "experimentalDecorators" : true,
     "paths": {
       "*": ["src/*"],
+      "@scenes": ["src/scenes"],
+      "@presenters": ["src/presenter"],
       "underscore": ["lodash"]
     }
   },

@@ -1,0 +1,13 @@
+{
+    "plugins": [
+      ["module-resolver", {
+        "root": ["./src"],
+        "alias": {
+            "@scenes": "mobx-example/src/scenes",
+            "@presenters": "mobx-example/src/presenter"
+        }
+      }]
+    ]
+  }
+
+  

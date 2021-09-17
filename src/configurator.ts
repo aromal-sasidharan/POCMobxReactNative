@@ -1,4 +1,4 @@
-import { AbstractReactTextFieldPresenter, ReactTextFieldPresenter } from "./presenter/ReactTextFieldPresenter";
+import { AbstractReactTextFieldPresenter, ReactTextFieldPresenter } from "@presenters/ReactTextFieldPresenter"
 
 
 

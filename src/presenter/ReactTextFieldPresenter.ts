@@ -10,7 +10,7 @@ class ReactTextFieldPresenter implements AbstractReactTextFieldPresenter {
 
     @observable text:String
     constructor() {
-        this.text = ""
+        this.text = "Hello"
         makeObservable(this)
     }
 

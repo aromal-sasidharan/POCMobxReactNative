@@ -1,8 +1,8 @@
+
 import { inject, observer } from "mobx-react";
 import React from "react";
 import { StyleSheet, Text, TextInput, View } from "react-native";
-import { AbstractReactTextFieldPresenter } from "../presenter/ReactTextFieldPresenter";
-
+import {AbstractReactTextFieldPresenter} from "@presenters/ReactTextFieldPresenters"
 
 interface ReactTextFieldView1Props {
     reactTextFieldPresenter?: AbstractReactTextFieldPresenter
